@@ -21,11 +21,11 @@ var change_image = function () {
 var game = function() {
     change_image()
     if(player_1>player_2) {
-        document.getElementById('message').innerHTML    = "Player 1 Wins"
+        document.getElementById('message').innerHTML    = " &#128681 Player 1 Wins"
         console.log('1 wins')
     }
     else if(player_1<player_2) {
-        document.getElementById('message').innerHTML    = "Player 2 Wins"
+        document.getElementById('message').innerHTML    = " &#128681 Player 2 Wins"
         console.log('2 wins')
     }
     else {

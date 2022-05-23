@@ -28,5 +28,11 @@ var game = function() {
     }
 }
 
-game()
+
+document.addEventListener("keyup", (e) => { 
+    if (e.code === "Space") {
+        game()
+    }
+});
+
 

@@ -1,3 +1,4 @@
+// Variables
 var images_list = ["images/dice1.png","images/dice2.png","images/dice3.png","images/dice4.png","images/dice5.png","images/dice6.png"]
 player_1 = document.getElementById('img_1');
 player_2 = document.getElementById('img_2');
@@ -5,11 +6,13 @@ game_prompt = document.getElementsByTagName('h1');
 score1 = 0;
 score2 = 0;
 
+// Random Index Generator
 var get_random_index = function () {
     var random_index = Math.floor(Math.random()*6);
     return(random_index);
 }
 
+// Change dice based on random index
 var change_image = function () {
 
     document.getElementById("img_1").src = images_list[player_1 = get_random_index()];
@@ -17,6 +20,7 @@ var change_image = function () {
 
 }
 
+// Check which dice is greater
 var game = function() {
     change_image()
     if(player_1>player_2) {
@@ -33,7 +37,6 @@ var game = function() {
         document.getElementById('message').innerHTML    = "DRAW!";
     }
 }
-
 
 var start_game = function () {
     document.addEventListener("keyup", (e) => { 
